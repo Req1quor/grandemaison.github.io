@@ -1,94 +1,108 @@
+/* === style.css pour GRANDEMAISON === */
+
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #0a0a0a;
-    color: #f0f0f0;
+    padding: 0;
+    font-family: 'Share Tech Mono', monospace;
+    background-color: #0b0c10;
+    color: #c5c6c7;
+    background-image: repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.01) 0px,
+      rgba(255, 255, 255, 0.01) 1px,
+      transparent 1px,
+      transparent 2px
+    );
   }
   
   header {
     text-align: center;
-    padding: 4rem 1rem 2rem;
-    background: linear-gradient(to bottom, #111, #000);
-  }
-  
-  .logo {
-    width: 120px;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    margin: 0.5rem 0;
-    letter-spacing: 2px;
-  }
-  
-  p {
-    max-width: 700px;
-    margin: auto;
-    line-height: 1.6;
-  }
-  
-  section {
     padding: 3rem 1rem;
-    text-align: center;
+    background-color: #1f2833;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.1);
   }
   
-  .galerie {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
+  header h1 {
+    font-size: 3rem;
+    color: #66fcf1;
+    margin: 0;
   }
   
-  .projet {
-    background: #1a1a1a;
-    border-radius: 12px;
-    overflow: hidden;
-    width: 280px;
-    box-shadow: 0 0 15px rgba(255,255,255,0.05);
-    transition: transform 0.2s;
+  .slogan {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #45a29e;
+    text-transform: uppercase;
   }
   
-  .projet:hover {
-    transform: scale(1.02);
+  main {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: auto;
   }
   
-  .projet img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
+  .project {
+    background-color: #1f2833;
+    border-left: 4px solid #66fcf1;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.1);
   }
   
-  .projet h3 {
-    margin: 1rem 0 0.5rem;
+  .project h2 {
+    color: #66fcf1;
+    margin-bottom: 0.5rem;
   }
   
-  .projet p {
-    font-size: 0.95rem;
-    padding: 0 1rem;
-  }
-  
-  .projet a {
+  .btn {
     display: inline-block;
-    margin: 1rem 0;
-    color: #00d8ff;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: transparent;
+    color: #66fcf1;
+    border: 1px solid #66fcf1;
     text-decoration: none;
-    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
   }
   
-  .contact .reseaux a {
-    margin: 0 1rem;
-    color: #00d8ff;
-    text-decoration: none;
+  .btn:hover {
+    background-color: #66fcf1;
+    color: #0b0c10;
+    box-shadow: 0 0 10px #66fcf1, 0 0 20px #66fcf1;
   }
   
   footer {
-    padding: 2rem 1rem;
-    background: #111;
     text-align: center;
-    font-size: 0.85rem;
-    color: #aaa;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  /* Glitch effect on hover (subtle) */
+  .btn::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(102, 252, 241, 0.1);
+    transform: skewX(-20deg);
+    transition: left 0.3s ease;
+  }
+  
+  .btn:hover::after {
+    left: 100%;
+  }
+  
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+    .project h2 {
+      font-size: 1.3rem;
+    }
   }
   
